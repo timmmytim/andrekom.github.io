@@ -1,0 +1,485 @@
+/*-----------------------------------------------------------------------
+ 	                               ALLGEMEINES
+-------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+
+html {
+	/*box-sizing: border-box;*/
+	font: normal 16px; 
+	line-height:1.2; 
+	font-family: "Raleway", sans-serif;
+	color: #555;
+	/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	
+}
+/*------------------------4 Sticky FOOTER*/
+#wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+#content {
+ padding-bottom: 10vmax;
+ padding-top:  4vmax;	
+ height: auto !important;
+	
+}
+/*------------------------4 Sticky FOOTER_END*/
+	
+@media only screen and (max-width: 1000px) {
+	body {
+		font-size: 0.8rem;  /*------------- EM= mit Vererbung...REM= bezieht sich auf font root-size*/
+	}
+}
+
+@media (max-width: 600px){
+	body {
+		font-size: 0.6rem; 
+	}
+}
+
+body {
+	background-image: url(../img/globe_solarized_24.png);
+	background-repeat: no-repeat;
+	background-position: center, bottom;
+	background-attachment: fixed;  /*------------- dont scroll*/
+	height: 100%; 					/*------------- 4 div wrapper..footer unten*/
+	
+}
+
+/* Überschriften & Links */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-weight: bold;
+	
+}
+
+h1 { font-size: 3.5vmax; }
+h2 { font-size: 1.8vmax; }
+h3 { font-size: 1.17vmax; }
+h4 { font-size: 1.12vmax;  }
+h5 { font-size: 1.3vmax; }
+h6 { font-size: 0.63vmax;  }
+
+
+
+
+#topbar, footer {
+	background-color: #999;
+	width: 100%;
+	display: flex;
+display: -webkit-flex;
+}
+
+nav, main, #footercontent {
+	width: 70%;
+	margin: auto;
+	/*display: flex;
+display: -webkit-flex;*/
+	
+}
+/*-----------------------------------------------------------------------
+ 	                               HEADER & MENU
+-------------------------------------------------------------------------*/
+header{
+	width: 100vw;
+/*	align-items: center;*/
+	color: #fff;
+	/*padding-bottom: 5vh;*/
+}
+
+
+
+#topbar {
+	overflow: hidden;		/*--------------------for sticky-navbar*/
+	/*margin-bottom: 5vh;*/
+	
+	
+	}
+
+/*#logo {
+	margin-left: 0px;
+	width: 120px;
+	
+}
+*/
+nav {   /*----- zentriert, 80%, FLEX-CONTAINER für menü & Login */
+	
+	display:  -webkit-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	
+	
+	
+}
+
+nav a {
+  /*float: left;
+  display: block;*/
+  color: #f2f2f2;
+/*  text-align: center;*/
+  padding: 1vw;
+  text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/*header nav li{
+	margin: 0 15px;
+}*/
+
+
+#topmenu {
+	display: flex;
+display: -webkit-flex;
+	justify-content: flex-start;
+	margin-left: -1vw;   /*----zum Ausrichten des Paddings von nav a {} --> Menu gerade mit Maincontent*/
+	
+}
+
+
+#accountlogin {		/*-----FLEX-CONTAINER für menü & Login shopping-cart */
+	display: flex;
+display: -webkit-flex;
+	justify-content: space-between;
+	align-items: center;    /* vertikale Ausrichtung*/
+	align-content: center;
+	
+}
+
+#login a, #signup a{
+	font-weight: bold;
+	
+}
+
+#cart img{
+	alignment-baseline: baseline;
+	align-items: baseline;
+	height: 2vw;
+	width: 2vw;
+}
+
+
+/*@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}*/
+
+/* Page content -------------------for sticky-navbar */
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 6vmax;
+}
+
+/*-------------------------------for sticky-navbar___END */
+
+/*----------------------------------------------------------------------------
+ 	                                 MAINCONTENT
+------------------------------------------------------------------------------*/
+
+/*.box {
+	background: #27ae60;
+	padding: 8px 15px;
+	margin: 10px 0;
+	font-size: 14px;
+	color: #fff !important;
+	font-weight: bold;
+	line-height: 14px;
+	text-align: center;
+	border: 1px solid #27ae60;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 5px;
+	box-shadow: 0 14px 0 0 rgba(255, 255, 255, .12) inset;
+}*/
+
+
+/*@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+
+	header h2{	
+		margin-bottom: 15px;
+	}
+	
+}*/
+
+main{
+	margin-top: 4vmax;
+	
+	
+}
+#mainsearch {
+	
+	margin-right: 40px;
+	width: 100%;
+	margin: auto;
+	display: flex;
+display: -webkit-flex;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: baseline;
+	justify-content:space-between;
+	
+	
+	
+
+}
+
+#letsfind {
+	font-weight: 900;
+	width: 45%;
+}
+/*----------------------------------FORMULAR--------------------*/
+#formsearch {
+	width: 55%;
+	text-align: right;
+	
+}
+#domain-textfield {
+	width: 50%;
+	
+}
+#select-tld {
+	width: 20%;
+	
+}
+
+#submitsearch {
+	width: 15%;
+	
+	
+}
+#submitsearch {
+   border: 1px solid #447314;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #addc7e 0 1px 0;
+   color: #31540c;
+   font-family: helvetica, serif;
+   padding: 0.5vmax 1vmax;
+   font-size: 1.5vmax;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#submitsearch:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   color: #fff;
+   }
+#submitsearch:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+   }
+
+
+input, button, submit, select {
+	/* Chrome, Safari 
+	-webkit-box-shadow: inset 5px 5px 15px #28ED63;
+	/* Standard syntax 
+	box-shadow: inset 5px 2px 5px #28ED63;*/
+	padding: 0.6vmax;
+	border-bottom-style: solid;
+	margin: 0.3vmax;
+	border-color: silver;
+}
+
+/*----------------------------------FORMULA_END--------------------*/
+
+#blockchaindomain, #hosting, #faq, #support {
+	
+	margin-top: 4vmax;
+	margin-bottom: 6vmax;
+	text-align: center;
+	width: 100%;
+	border-bottom: solid 1px;
+	border-top: solid 1px;
+	font-weight: normal;
+	height: auto;
+}
+
+#dns-container, #hosting-container, #support-container{
+	margin: 30px 0px 10px 0px;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    align-items: baseline;
+	
+}
+
+#hosting img {
+	width: 90%;
+	height: auto;
+}
+
+#support_img {
+	margin: 30px 0px 10px 0px;
+	width: 40%;
+	height: auto;
+	
+}
+
+#hosting img, #support-container img {
+ /* Add this as a property for a selector to which the effect has to be applied*/
+
+	/* Chrome and Safari */
+	-webkit-border-top-left-radius:40px;
+	-webkit-border-top-right-radius:40px;
+	-webkit-border-bottom-right-radius:40px;
+	-webkit-border-bottom-left-radius:40px;
+	/* Firefox */
+	-moz-border-radius-topleft:40px;
+	-moz-border-radius-topright:40px;
+	-moz-border-radius-bottomright:40px;
+	-moz-border-radius-bottomleft:40px;
+	/* Standard Syntax */
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	
+	/* Add the following properties to the selector to which the effect has to be applied */
+
+	/* Chrome, Safari */
+	-webkit-box-shadow: 5px 5px 15px silver;
+	/* Standard syntax */
+	box-shadow: 5px 5px 15px silver;
+}
+ 
+
+
+
+#hosting-container{
+
+	
+}
+.content-box3, .content-box4 {
+	
+	padding: 0.6vmax;
+	border: 1px solid #000000;
+	border-radius: 2vmax;
+    /*-moz-border-radius: 2vmax;
+    -webkit-border-radius: 2vmax;*/
+
+}
+.content-box2 {width: 40%;}
+.content-box3 {width: 30%;}
+.content-box4 {width: 20%;}
+/*----------------------------------------------------------------------------
+ 	                                 FOOTER
+------------------------------------------------------------------------------*/
+footer {
+	position:absolute;
+    bottom: 0;
+	height: auto;
+	padding: 1vmax 0px 1vmax 0px;
+	
+	
+}
+
+
+
+#footercontent {
+	display: flex;
+display: -webkit-flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	
+}
+#fo-aboutus, #fo-certs, #fo-payments, #fo-contact {
+	width: 24%;
+	font-size: 1.1vmax;
+	padding: 0.1% 0% 0.5% 0%;
+}
+
+.payment_icon {}
+
+#fo-certs-cont, #fo-payments-cont, #fo-aboutus-cont, #fo-contact-cont {
+	margin: 10px 0px 10px 0px;
+	display: flex;
+display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: flex-start;
+    align-items: baseline;
+	
+}
+
+footer .container{
+	width: 45%;
+	align-items: baseline;
+	vertical-align: baseline;
+	
+}
+#fo-certs img {
+	width: 70%;
+	max-height: 70%;
+	height: inherit !important;
+	padding: 0px 0px 5px 0;
+}
+.payment_icon {
+	width: 1.4vmax;
+	height: auto;
+	margin-right: 2px;
+	margin-bottom: -2px;
+}
+
+/*----------------------------------------------------------------------------
+ 	                                OTHER
+------------------------------------------------------------------------------*/
